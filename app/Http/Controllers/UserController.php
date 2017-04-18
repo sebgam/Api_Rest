@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+       return User::all();
     }
 
     /**
@@ -36,7 +36,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        User::create($request->all);
+         $this->validate($request, [ //---------validacion de formulario crear IF en la vista para mostrar error---------
+        'name'      => 'required',
+        'email'     => 'required|email',
+        'password'  => 'required'
+        ]);
+
+
+        User::create($request->all());
         return ['created'=>true];
     }
 

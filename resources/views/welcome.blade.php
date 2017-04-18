@@ -2,14 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio</title>
+    <title>Document</title>
 </head>
 <body>
-    
-esta es la parte visual
-
-
-
-
+    api_rest registro de usuarios
 </body>
 </html>
